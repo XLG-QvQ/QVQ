@@ -1,0 +1,39 @@
+ *{
+    margin: 0;
+    padding: 0;
+ }
+body {
+    background: url("../images/1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+ul li {
+    list-style: none;
+}
+.container,.img-list {
+    width: 100%;
+    height: 200px;
+}
+.container {
+    background:#00000060;
+}
+.container .img-list {
+    display: flex;/*开启弹性盒模型*/
+    justify-content: space-around; /*主轴，左右均分*/
+    align-items: center;/*侧轴 上下均分*/
+}
+.container .img-list li img {
+    height: 100px;
+}
+.button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50px;
+    height: 50px;
+    background-image: url("../images/upseek.png");
+}
+.button:hover {
+    background-position-y: -64px;
+}

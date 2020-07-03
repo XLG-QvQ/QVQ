@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>百度一键换肤</title>
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+
+<body>
+    <div class="container">
+        <ul class="img-list">
+            <li data-src="../images/1.jpg"><!--自定义图片路径-->
+                <img src="../images/1-1.jpg" alt="">
+            </li>
+            <li data-src="../images/2.jpg">
+                <img src="../images/2-2.jpg" alt="">
+            </li>
+             <li data-src="../images/3.jpg">
+                <img src="../images/3-3.jpg" alt="">
+            </li>
+             <li data-src="../images/4.jpg">
+                <img src="../images/4-4.jpg" alt="">
+            </li>
+             <li data-src="../images/5.jpg">
+                <img src="../images/5-5.jpg" alt="">
+            </li>
+        </ul>
+    </div>
+    <button class="button"></button>
+    <script src="../js/jquery.js"></script>
+    <script>
+        /*  1.给按钮绑定点击事件
+
+            2.container元素切换显示
+
+            3.给小图标绑定点击事件
+            
+            4.实现换肤*/
+        $(".button").click(function () {
+            // alert("给按钮绑定点击事件 测试成功")
+            $(".container").slideToggle();/*container元素切换显示 元素动画上下切换显示*/
+        });  
+        $("li").click(function(){
+            // alert("给小图标绑定点击事件 测试成功")
+           var src= $(this).attr("data-src");
+          //    alert(src);测试成功 
+          $("body").css({
+              "background-image": "url(" + src + ")"
+          })
+        });
+    </script>
+</body>
+
+</html>
